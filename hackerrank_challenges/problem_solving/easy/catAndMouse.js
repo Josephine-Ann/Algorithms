@@ -1,18 +1,8 @@
 function catAndMouse(catA, catB, mouse) {
-    var differenceCatA = mouse - catA
-    var differenceCatB = mouse - catB
-    if (differenceCatA < 0) {
-        differenceCatA *= -1
-    }
-    if (differenceCatB < 0) {
-        differenceCatB *= -1
-    }
-    if (differenceCatA === differenceCatB) return "Mouse C"
-    if (Math.min(differenceCatA, differenceCatB) === differenceCatA) {
-        return "Cat A"
-    } else if (Math.min(differenceCatA, differenceCatB) === differenceCatB) {
-        return "Cat B"
-    }
+    var differences = [(mouse - catA), (mouse - catB)]
+    differences = differences.map(Math.abs);
+    if (differences[0] === differences[1]) return "Mouse C"
+    return Math.min(...differences) === differences[0] ? "Cat A" : "Cat B"
 }
 
 console.log(catAndMouse(1, 2, 3))
