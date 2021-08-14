@@ -4,7 +4,7 @@ function alternate(s) {
     function onlyOriginal(array) {
         var items = {}
         array.forEach(element => {
-            if (!items[element]) items[element] = []
+            if (!items[element]) items[element] = true
         });
         return items
     }
