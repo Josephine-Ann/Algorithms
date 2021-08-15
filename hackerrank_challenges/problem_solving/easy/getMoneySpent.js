@@ -11,3 +11,6 @@ function getMoneySpent(keyboards, drives, b) {
 }
 
 console.log(getMoneySpent([3, 1], [5, 2, 8], 10))
+
+// explanation
+// https://www.hackerrank.com/challenges/electronics-shop/problem
