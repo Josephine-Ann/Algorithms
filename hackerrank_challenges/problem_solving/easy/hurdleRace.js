@@ -8,5 +8,8 @@ function hurdleRace(k, height) {
 
 console.log(hurdleRace(4, [1, 6, 3, 5, 2]))
 
-// 4
-// 1 6 3 5 2
+
+
+
+// explanation
+// https://www.hackerrank.com/challenges/the-hurdle-race/problem

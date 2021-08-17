@@ -23,3 +23,6 @@ console.log(designerPdfViewer([
 ],
     "abc"))
 
+
+// explanation
+// https://www.hackerrank.com/challenges/designer-pdf-viewer/problem?h_r=next-challenge&h_v=zen
