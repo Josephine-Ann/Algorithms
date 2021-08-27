@@ -7,7 +7,7 @@ function appendAndDelete(s, t, k) {
     }
     for (let i = 0; i < s.length; i++) {
         if (t[i] === undefined) {
-            if ((k - ((s.length) - ((s.length - t.length)))) > 1) return "Yes"
+            if ((k - ((s.length) - ((s.length - t.length)))) % 2 === 0) return "Yes"
             i = s.length
         } else if (t[i] !== s[i]) {
             counter += (t.length) - ((s.slice(0, i)).length) + (s.slice(i, s.length)).length
@@ -18,5 +18,5 @@ function appendAndDelete(s, t, k) {
     return counter === k ? "Yes" : "No"
 }
 
-// explanation 
-// https://www.hackerrank.com/challenges/append-and-delete/problem
+// explanation
+// https://github.com/Josephine-Ann/Algorithms/blob/master/hackerrank_challenges/problem_solving/easy/appendAndDelete.js
