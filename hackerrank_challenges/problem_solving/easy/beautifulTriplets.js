@@ -9,3 +9,6 @@ function beautifulTriplets(d, arr) {
 }
 
 console.log(beautifulTriplets(3, [1, 2, 4, 5, 7, 8, 10]))
+
+// https://www.hackerrank.com/challenges/beautiful-triplets/problem
+// explanation
