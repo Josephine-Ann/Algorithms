@@ -6,7 +6,5 @@ function serviceLane(width, cases) {
     return result
 }
 
-console.log(serviceLane([
-    2, 3, 1, 2,
-    3, 2, 3, 3
-], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]]))
+// explanation
+// https://www.hackerrank.com/challenges/service-lane/problem
