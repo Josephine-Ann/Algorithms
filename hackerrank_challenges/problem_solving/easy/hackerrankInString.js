@@ -11,4 +11,5 @@ function hackerrankInString(s) {
     }
     return counter === hackerRank.length ? "YES" : "NO"
 }
-console.log(hackerrankInString("rhbaasdndfsdskgbfefdbrsdfhuyatrjtcrtyytktjjt"))
+// explanation
+// https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem
