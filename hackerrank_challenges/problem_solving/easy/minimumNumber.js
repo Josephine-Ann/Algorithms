@@ -15,8 +15,6 @@ function minimumNumber(n, password) {
             containsUpperCase = true
         } else if (char.toUpperCase() !== char) {
             containsLowerCase = true
-        } else if (specialChar.includes(char)) {
-            containsSpecialChar = true
         }
     });
     if (!containsDigit) totalNeeded++
