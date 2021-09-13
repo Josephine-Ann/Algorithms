@@ -1,6 +1,6 @@
 function weightedUniformStrings(s, queries) {
     var finalWeights = []
-    var currentString = "abc"
+    var currentString = ""
     for (let i = 0; i < s.length; i++) {
         if (s[i] === currentString[currentString.length - 1] || currentString.length === 0) {
             currentString = currentString.concat(s[i])
