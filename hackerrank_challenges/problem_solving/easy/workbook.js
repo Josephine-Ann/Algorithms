@@ -31,3 +31,6 @@ function workbook(n, k, arr) {
 }
 
 console.log(workbook(10, 5, [3, 8, 15, 11, 14, 1, 9, 2, 24, 31]))
+
+// explanation
+// https://www.hackerrank.com/challenges/lisa-workbook/problem
