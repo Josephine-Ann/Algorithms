@@ -30,3 +30,6 @@ function acmTeam(topic) {
 }
 
 console.log(acmTeam(["10101", "11100", "11010", "00101"]))
+
+// explanation
+// https://www.hackerrank.com/challenges/acm-icpc-team/problem

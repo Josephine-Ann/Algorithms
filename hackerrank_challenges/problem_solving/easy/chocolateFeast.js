@@ -15,3 +15,6 @@ function chocolateFeast(n, c, m) {
 }
 
 console.log(chocolateFeast(7, 3, 2))
+
+// explanation
+// https://www.hackerrank.com/challenges/chocolate-feast/problem

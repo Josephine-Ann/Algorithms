@@ -42,3 +42,6 @@ function findMedian(arr) {
 }
 
 console.log(findMedian([5, 3, 1, 2, 4]))
+
+// explanation
+// https://www.hackerrank.com/challenges/find-the-median/problem
