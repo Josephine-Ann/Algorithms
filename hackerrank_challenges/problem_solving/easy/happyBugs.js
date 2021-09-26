@@ -15,4 +15,5 @@ function happyLadybugs(b) {
     return "YES"
 }
 
-console.log(happyLadybugs("B_RRBR"))
+// explanation
+// https://www.hackerrank.com/challenges/happy-ladybugs/problem
