@@ -1,4 +1,3 @@
-// Write your code here
 function happyLadybugs(b) {
     b = b.split("")
     var frequencyCounter = {}
