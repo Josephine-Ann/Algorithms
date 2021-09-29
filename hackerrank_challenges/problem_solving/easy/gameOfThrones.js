@@ -7,7 +7,6 @@ function gameOfThrones(s) {
     var sLength = Object.keys(freqC).length
     var counterOdd = 0
     var counterSingle = 0
-    console.log(freqC)
     for (const char in freqC) {
         if ((freqC[char] % 2 !== 0) && (sLength % 2 !== 0)) {
             return "NO"
