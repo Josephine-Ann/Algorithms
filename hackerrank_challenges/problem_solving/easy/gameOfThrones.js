@@ -1,5 +1,4 @@
 function gameOfThrones(s) {
-    // Write your code here
     var freqC = {}
     s = s.split("")
     s.forEach(char => {
@@ -27,3 +26,6 @@ function gameOfThrones(s) {
     return "YES"
 }
 console.log(gameOfThrones("cdcdcdcdeeeef"))
+
+// explanation
+// https://www.hackerrank.com/challenges/game-of-thrones/problem
