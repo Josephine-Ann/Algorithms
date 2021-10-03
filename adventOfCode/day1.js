@@ -24,6 +24,7 @@ function dayOnePartTwo(i) {
                 th = [parseInt(n, 10), item, (ans - item)]
             }
         });
+        if (th) break;
     }
     return th[0] * th[1] * th[2]
 }
@@ -228,7 +229,8 @@ const inp = [
     1731,
     1451,
     549,
-    1570]
+    1570
+]
 
 console.log(dayOnePartOne(inp))
 console.log(dayOnePartTwo(inp))
