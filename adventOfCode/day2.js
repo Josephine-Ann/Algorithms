@@ -37,6 +37,8 @@ function passwords(inp) {
     return [counter, newRulesCounter]
 }
 
+// explanation
+// https://adventofcode.com/2020/day/2
 
 const inp = [
     "2-4 p: vpkpp",
