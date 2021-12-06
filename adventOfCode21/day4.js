@@ -1,4 +1,24 @@
-[
+var numbers = [4, 75, 74, 31, 76, 79, 27, 19, 69, 46, 98, 59, 83, 23, 90, 52, 87, 6, 11, 92, 80, 51, 43, 5, 94, 17, 15, 67, 25, 30, 48, 47, 62, 71, 85, 58, 60, 1, 72, 99, 3, 35, 42, 10, 96, 49, 37, 36, 8, 44, 70, 40, 45, 39, 0, 63, 2, 78, 68, 53, 50, 77, 20, 55, 38, 86, 54, 93, 26, 88, 12, 91, 95, 34, 9, 14, 33, 66, 41, 13, 28, 57, 29, 73, 56, 22, 89, 21, 64, 61, 32, 65, 97, 84, 18, 82, 81, 7, 16, 24]
+var nums = [7, 4, 9, 5, 11, 17, 23, 2, 0, 14, 21, 24, 10, 16, 13, 6, 15, 25, 12, 22, 18, 20, 8, 19, 3, 26, 1
+]
+
+var boards =
+    [[[22, 13, 17, 11, 0],
+    [8, 2, 23, 4, 24],
+    [21, 9, 14, 16, 7],
+    [6, 10, 3, 18, 5],
+    [1, 12, 20, 15, 19]],
+    [[3, 15, 0, 2, 22],
+    [9, 18, 13, 17, 5],
+    [19, 8, 7, 25, 23],
+    [20, 11, 10, 24, 4],
+    [14, 21, 16, 12, 6]],
+    [[14, 21, 17, 24, 4],
+    [10, 16, 15, 9, 19],
+    [18, 8, 23, 26, 20],
+    [22, 11, 13, 6, 5],
+    [2, 0, 12, 3, 7]]]
+var testData = [
     [
         [30, 46, 94, 20, 2],
         [53, 67, 69, 75, 65],
@@ -799,3 +819,56 @@
         [98, 38, 35, 0, 70]
     ]
 ]
+function giantSquid(arr, nums) {
+    let boardInfo = {
+    }
+    let lengthArrays = (arr[0][0]).length
+    for (let i = 0; i < arr.length; i++) {
+        if (!boardInfo[i]) boardInfo[i] = {}
+        for (let j = 0; j < arr[i].length; j++) {
+            if (!boardInfo[i]["lines"]) boardInfo[i]["lines"] = {}
+            if (!boardInfo[i]["columns"]) boardInfo[i]["columns"] = {}
+            for (let k = 0; k < arr[i][j].length; k++) {
+                boardInfo[i][arr[i][j][k]] = {
+                    line: j,
+                    found: false
+                }
+            }
+        }
+    }
+    let possibilities;
+    let line;
+    let counter = 0;
+    let finalSumUnmarked = 0;
+    let element;
+    let justCalled = 0;
+    while (!possibilities) {
+        element = nums[counter]
+        for (const board in boardInfo) {
+            if (boardInfo[board][element]) {
+                line = boardInfo[board][element]["line"]
+                boardInfo[board][element]["found"] = true
+                boardInfo[board]["lines"][line]++
+                if (boardInfo[board]["lines"][line] === lengthArrays && !possibilities) {
+                    possibilities = arr[parseInt(board, 10)][parseInt(line, 10)]
+                    justCalled = element
+                    for (value in boardInfo[board]) {
+                        if (!(boardInfo[board][value].found) && value !== "lines") {
+                            console.log(value)
+                            console.log(boardInfo[board][value])
+                            finalSumUnmarked += (parseInt(value, 10))
+                        }
+                    }
+                }
+            }
+        }
+        counter++
+    }
+    console.log(boardInfo)
+    console.log(finalSumUnmarked)
+    console.log(justCalled)
+    return justCalled * finalSumUnmarked
+}
+
+
+console.log(giantSquid(testData, numbers))
