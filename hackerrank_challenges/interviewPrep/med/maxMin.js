@@ -1,19 +1,23 @@
 function maxMin(k, arr) {
     arr.sort((a,b)=>a-b);
+    let min;
+    let max;
     let unfairness;
     let copy = []
     let i = 0
     for (i; i < (k); i++) {
       copy.push(arr[i])
     }
-    unfairness = Math.max(...copy) - Math.min(...copy)
+    max = Math.max(...copy)
+    min = Math.min(...copy)
+    unfairness = max - min
     for (i; i < arr.length; i++) {
       copy.shift()
       copy.push(arr[i])
-      unfairness = Math.min(unfairness, (Math.max(...copy) - Math.min(...copy)))
+      unfairness = Math.min(unfairness, (copy[copy.length - 1] - copy[0]))
     }
     return unfairness
-}
+  }
 
 
 console.log(maxMin(3,[
