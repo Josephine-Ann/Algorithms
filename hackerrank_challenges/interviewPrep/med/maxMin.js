@@ -19,6 +19,8 @@ function maxMin(k, arr) {
     return unfairness
   }
 
+//   https://www.hackerrank.com/challenges/angry-children/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms
+
 
 console.log(maxMin(3,[
     10,
