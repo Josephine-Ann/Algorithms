@@ -12,3 +12,5 @@ function closestNumbers(arr) {
 }
 const items = [5, 4, 3, 2]
 console.log(closestNumbers(items))
+
+// https://www.hackerrank.com/challenges/closest-numbers/problem?isFullScreen=true

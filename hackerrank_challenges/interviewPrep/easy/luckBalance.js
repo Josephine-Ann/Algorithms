@@ -10,7 +10,6 @@ function luckBalance(k, contests) {
         }
         luck += contests[i][0]
     }
-
     if (quantityImportant < k) return luck
     importantLuck.sort((a,b)=>a-b);
     const debtLuckImportant = quantityImportant - k;
@@ -22,3 +21,5 @@ function luckBalance(k, contests) {
 
 const plays = [[5, 1], [2, 1], [1, 1], [8, 1], [10, 0], [5, 0]]
 console.log(luckBalance(3, plays))
+
+// https://www.hackerrank.com/challenges/luck-balance/problem?isFullScreen=true&h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=greedy-algorithms
